@@ -29,7 +29,14 @@
         />
       </mat-form-field>
     </div>
-
+    <div class="pagination">
+      <button mat-fab color="primary" aria-label="less" [disabled]="offset == 0" (click)="getAllCharacters(limit, offset - 10)">
+        <mat-icon>arrow_back_ios</mat-icon>
+      </button>
+      <button mat-fab color="primary" aria-label="more" (click)="getAllCharacters(limit, offset + 10)">
+        <mat-icon>arrow_forward_ios</mat-icon>
+      </button>
+    </div>
     <mat-grid-list cols="4" rowHeight="250">
       <mat-grid-tile
         *ngFor="let character of characters | async | appFilter: searchText"

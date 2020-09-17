@@ -25,15 +25,18 @@ export class CharacterListComponent implements OnInit {
   selectedCharacter: Character;
   showProgress = false;
   searchText = "";
+  limit = 20;
+  offset = 0;
 
   @ViewChild(MatDrawer) private drawer: MatDrawer;
 
-  getAllCharacters() {
-    this.characters = this.characterService.getAllCharacters();
+  getAllCharacters(limit, offset) {
+    this.offset = offset;
+    this.characters = this.characterService.getAllCharacters(limit, offset);
   }
 
   ngOnInit() {
-    this.getAllCharacters();
+    this.getAllCharacters(this.limit, this.offset);
   }
 
   selectCharacter(character: Character) {

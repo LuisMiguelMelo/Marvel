@@ -12,9 +12,9 @@ import { Character } from "../core/character.model";
 export class CharacterService {
   constructor(private http: HttpClient) {}
 
-  getAllCharacters(): Observable<Character[]> {
+  getAllCharacters(limit, offset): Observable<Character[]> {
     return this.http
-      .get<Character[]>(`${environment.apiUrl}characters?limit=100`)
+      .get<Character[]>(`${environment.apiUrl}characters?limit=` + limit + `&offset=` + offset)
       .pipe(map((response: any) => response.data.results));
   }
 }

@@ -42,3 +42,13 @@ mat-drawer {
 .img:hover {
   transform: scale(1.02);
 }
+
+.pagination {
+  background-color: transparent;
+  padding: 0px 25px;
+  text-align: right;
+}
+
+.pagination button {
+  margin-left: 10px;
+}
