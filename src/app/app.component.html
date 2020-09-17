@@ -1,0 +1,14 @@
+<div fxLayout="column" fxFill>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <a mat-icon-button href="https://www.angular.io/" target="_blank">
+        <img src="assets/angular.png" />
+      </a>
+
+      <h2 fxFlex>{{ title }}</h2>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div fxFlex class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

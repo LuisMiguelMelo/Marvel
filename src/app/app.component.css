@@ -1,0 +1,13 @@
+img {
+  width: 24px;
+  height: 24px;
+}
+
+.fab {
+  font-size: 1.8em;
+}
+
+.content {
+  background-image: url("../assets/background.png");
+  overflow: auto;
+}
