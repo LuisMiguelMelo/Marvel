@@ -8,7 +8,7 @@ Clona este repositorio en tu computadora y luego corre el comando `npm install` 
 
 ## Uso
 
-Before you start, you must acquire a developer key from Antes de comenzar tienes que adquirir un 'developer API key' en [Marvel Developer Portal](http://developer.marvel.com/). luego,
+Antes de comenzar tienes que adquirir un 'developer API key' en [Marvel Developer Portal](http://developer.marvel.com/). luego,
 cambia la variable `apiKey` en el archivo `src/environments` con tu nueva **public** API key.
 
 ```
