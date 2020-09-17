@@ -1,8 +1,9 @@
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
-import { ErrorHandler, NgModule } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { CommonModule } from "@angular/common";
 
 import { AppMaterialModule } from "./app-material.module";
 import { AppRoutingModule } from "./app-routing.module";
@@ -20,6 +21,7 @@ import { CharacterModule } from "./characters/characters.module";
     CharacterModule,
     FlexLayoutModule,
     HttpClientModule,
+    CommonModule,
   ],
   providers: [
     {

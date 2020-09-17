@@ -1,12 +1,12 @@
 <mat-drawer-container>
   <mat-drawer mode="over" position="end">
-    <mat-tab-group>
-      <mat-tab label="Details">
+    <mat-tab-group mat-align-tabs="center">
+      <mat-tab label="Details" class="prueba">
         <app-character-detail
           [character]="selectedCharacter"
         ></app-character-detail>
       </mat-tab>
-      <mat-tab label="Comics">
+      <mat-tab label="Comics" class="prueba">
         <app-comic-list
           *ngIf="selectedCharacter"
           [character]="selectedCharacter"
@@ -25,14 +25,14 @@
           matInput
           placeholder="Search for characters..."
           #searchBox
-          (keyup)="search(searchBox.value)"
+          [(ngModel)]="searchText"
         />
       </mat-form-field>
     </div>
 
     <mat-grid-list cols="4" rowHeight="250">
       <mat-grid-tile
-        *ngFor="let character of characters | async; trackBy: trackByCharacters"
+        *ngFor="let character of characters | async | appFilter: searchText"
       >
         <app-character-card
           [character]="character"

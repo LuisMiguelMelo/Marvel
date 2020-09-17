@@ -12,16 +12,9 @@ import { Character } from "../core/character.model";
 export class CharacterService {
   constructor(private http: HttpClient) {}
 
-  getCharacters(term: string): Observable<Character[]> {
-    const options = new HttpParams().set("nameStartsWith", term);
+  getAllCharacters(): Observable<Character[]> {
     return this.http
-      .get<Character[]>(`${environment.apiUrl}characters`, { params: options })
-      .pipe(map((response: any) => response.data.results));
-  }
-
-  getAllCharacters(): Observable<any> {
-    return this.http
-      .get<any>(`${environment.apiUrl}characters`)
+      .get<Character[]>(`${environment.apiUrl}characters?limit=100`)
       .pipe(map((response: any) => response.data.results));
   }
 }

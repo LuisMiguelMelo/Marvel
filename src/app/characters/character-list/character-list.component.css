@@ -13,7 +13,14 @@ mat-form-field {
 
 mat-drawer {
   position: fixed;
-  width: 320px;
+  width: 500px;
+}
+.mat-tab-label {
+  width: 50% !important;
+}
+
+::ng-deep .mat-tab-list .mat-tab-label {
+  width: 50% !important;
 }
 
 .search {
