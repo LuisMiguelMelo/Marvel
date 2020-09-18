@@ -25,7 +25,7 @@ export class CharacterListComponent implements OnInit {
   selectedCharacter: Character;
   showProgress = false;
   searchText = "";
-  limit = 20;
+  limit = 32;
   offset = 0;
 
   @ViewChild(MatDrawer) private drawer: MatDrawer;
